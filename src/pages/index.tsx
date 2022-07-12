@@ -2,16 +2,18 @@ import React from 'react';
 import Head from 'next/head';
 import { Grid } from '@mui/material';
 import Footer from '../components/Footer';
-import Bar from '../components/Bar';
+import Header from '../components/Header';
 
 const Home: React.FC = () => (
-  <Grid display="flex" direction="column">
+  <>
     <Head>
-      <title>MKS</title>
+      <title>MKS sistemas</title>
     </Head>
-    <Bar />
-    <Footer />
-  </Grid>
+    <Grid display="flex" direction="column">
+      <Header />
+      <Footer />
+    </Grid>
+  </>
 );
 
 export default Home;

@@ -1,5 +1,7 @@
 import { Button, Grid, Typography} from '@mui/material';
-import styled from 'styled-components';
+import {  styled } from '@mui/material/styles';
+
+
 
 export const Container = styled(Grid)`
   display: flex;
@@ -8,17 +10,20 @@ export const Container = styled(Grid)`
   width: 100%;
   height: 101px;
   align-items: center;
-  position: absolute;
-  @media (max-width: 500px) {
+  justify-content:space-between;
+  @media (max-width: 400px) {
+    height: 60px;
   }
 `;
-
 export const Text = styled(Typography)`
   font-style: normal;
-  font-weight: 500px;
-  font-size: 40px;
+  font-weight: 600px;
+  font-size: 46px;
   line-height: 19px;
   color: #FFFFFF;
+  @media (max-width: 400px) {
+    font-size: 35px;
+  }
 `;
 export const Sub = styled(Typography)`
   font-style: normal;
@@ -26,12 +31,26 @@ export const Sub = styled(Typography)`
   font-size: 20px;
   line-height: 19px;
   color: #FFFFFF;
+  @media (max-width: 400px) {
+    font-size: 17px;
+  }
 `;
 
 export const Btn = styled(Button)`
   background: #FFFFFF;
   width: 90px;
-  height: 45px;
+  height: 40px;
   border-radius: 8px;
-  
+  justify-content: center;
+  align-items: center;
+  margin-right: 60px;
+  color: #000000;
+  @media (max-width: 400px) {
+    margin-right: 30px;
+    width: 52px;
+    height: 30px;
+  }
+  :hover{
+  background: #fffa;
+  }
 `;
