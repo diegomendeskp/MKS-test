@@ -1,29 +1,34 @@
 import { useEffect, useState } from 'react';
+import Card from '.';
 import { apiProducts } from '../../pages/services';
+import { CardContainer } from './styles';
 
-export interface Iproduto {
-  id: number;
-  photo: string;
-  name: string;
-  description: string;
-  price: string;
-}
-
-export const Products = ({
-  id,
-  photo,
-  name,
-  description,
-  price,
-}: Iproduto) => {
-  const [products, setProducts] = useState();
-
+export const Products = () => {
+  const [products, setProducts] = useState([]);
+  const getData = async () => {
+    const data = await apiProducts.get(
+      '/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC'
+    );
+    setProducts(data?.data.products);
+  };
   useEffect(() => {
-    const getData = async () => {
-      const data = await apiProducts();
-      setProducts(data.products);
-    };
     getData();
   }, []);
-  console.log(products);
+  return (
+    <>
+      <CardContainer>
+        {products.map((product, key) => {
+          return (
+            <Card
+              id={product?.id}
+              photo={product?.photo}
+              name={product?.name}
+              description={product?.description}
+              price={product?.price}
+            />
+          );
+        })}
+      </CardContainer>
+    </>
+  );
 };

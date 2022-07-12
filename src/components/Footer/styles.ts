@@ -16,5 +16,4 @@ export const Container = styled(Grid)`
     background: #E5E5E5;
 
   }
-  
 `;
