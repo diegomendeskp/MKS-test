@@ -11,6 +11,7 @@ export const Container = styled(Grid)`
   height: 101px;
   align-items: center;
   justify-content:space-between;
+  z-index: 1;
   @media (max-width: 400px) {
     height: 60px;
   }

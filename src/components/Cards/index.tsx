@@ -1,4 +1,12 @@
-import { Cards, StyleButton, CardContainer } from './styles';
+import {
+  Cards,
+  StyleButton,
+  CardContainer,
+  Title,
+  Text,
+  Price,
+  Descript,
+} from './styles';
 
 export interface CardProps {
   id: number;
@@ -17,10 +25,12 @@ export default function Card({
   console.log(photo);
   return (
     <Cards>
-      <img src={photo} width="200" height="100" />
-      {name}
-      {description}
-      {price}
+      <img src={photo} width="200" height="150" />
+      <Text>
+        <Title>{name}</Title>
+        <Price>{price}</Price>
+        <Descript>{description}</Descript>
+      </Text>
       <StyleButton>Comprar</StyleButton>
     </Cards>
   );

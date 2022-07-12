@@ -9,8 +9,8 @@ export const Container = styled(Grid)`
   height: 35px;
   align-items: center;
   background: #EEEEEE;
-  position: absolute;
   bottom: 0;
+  z-index: 1;
   @media (max-width: 500px) {
     font-size: 17px;
     background: #E5E5E5;

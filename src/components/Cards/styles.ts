@@ -25,8 +25,52 @@ line-height: 18px;
     background: #3973cc;
 }
 `;
+
+export const Title = styled(Typography)`
+display: flex;
+justify-content: flex-start;
+margin-left: 5px;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+width: 100px;
+color: #2C2C2C;
+height: 3px;
+
+`;
+
+export const Text = styled(Grid)`
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+`;
+
+export const Price = styled(Typography)`
+background: #373737;
+border-radius: 5px;
+width: 65px;
+height: 27px;
+align-items: center;
+color: #FFFFFF;
+font-weight: 700;
+font-size: 15px;
+line-height: 15px;
+`;
+
+export const Descript = styled(Typography)`
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+font-weight: 300;
+font-size: 10px;
+line-height: 12px;
+color: #2C2C2C;
+`;
+
 export const CardContainer = styled(Grid)`
 display: flex;
+margin-top: 50px;
+margin-bottom: 50px;
 margin-left: 10%;
 margin-right: 10%;
 flex-direction: row;
@@ -36,5 +80,4 @@ flex-wrap: wrap;
 column-gap: 20px;
 row-gap: 20px;
 width: 80%;
-border: solid red 1px;
 `;
